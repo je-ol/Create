@@ -15,7 +15,7 @@ import { Label } from "@/components/ui/label";
 export function CreatePerson() {
 
   return (
-    <Card>
+    <Card className="bg-primary-light">
       <CardHeader>
         <CardTitle>New Person</CardTitle>
         <CardDescription>

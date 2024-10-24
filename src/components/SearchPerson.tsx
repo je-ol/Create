@@ -1,5 +1,3 @@
-import { useGetPersonQuery } from "../api/apiSlice";
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -13,11 +11,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export function SearchPerson() {
-  const [id, setId] = useState("");
-  const { data: person } = useGetPersonQuery(id);
 
   return (
-    <Card>
+    <Card className="bg-primary-light">
       <CardHeader>
         <CardTitle>Search</CardTitle>
         <CardDescription>
@@ -31,16 +27,8 @@ export function SearchPerson() {
           <Input
             id="id"
             placeholder="51e8dc7f-7273-4fd8-97be-3bf89583fe9d"
-            value={id}
-            onChange={(e) => setId(e.target.value)}
           />
         </div>
-        {person && (
-          <div>
-            <p>First name: {person.firstName}</p>
-            <p>Last name: {person.lastName}</p>
-          </div>
-        )}
       </CardContent>
       <CardFooter>
         <Button typeof="Submit">Search</Button>

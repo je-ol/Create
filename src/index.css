@@ -1,8 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    --radius: 0.5rem;
-  }
-  
+  --radius: 0.5rem;
+  --primary-dark: #151515;
+  --primary-light: #1f1f21;
+  --primary-muted: #4E607E;
+  --primary-input: #28282a;
+  --input-border: #9747FF;
+  --primary-subtle: #848484;
+  --off-white: #e0e0e0;
+  --button-default: #015ff9;
+  --button-hover: #0840ce;
+  --button-active: #002293;
+  --button-border: #151515;
+  --error: #FF0000;
+  --success: #3fdb67;
+  --seconday-accent: #015FF9;
+  --terciary-accent: #A00BD1;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  background-color: #151517;
+  color: #e0e0e0;
+}
