@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
+
 export default {
 	darkMode: ["class"],
 	content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
@@ -14,7 +16,7 @@ export default {
 				'primary-light': 'var(--primary-light)',      // Component background color
 				'primary-muted': 'var(--primary-muted)',      // Used in header
 				'primary-input': 'var(--primary-input)',      // Background color for input fields
-				'input-border': 'var(--input-border)',        // Border color for input fields when active
+				'input-active': 'var(--input-active)',        // Border color for input fields when active
 				'primary-subtle': 'var(--primary-subtle)',    // Subtitle grey and placeholder text color
 				'off-white': 'var(--off-white)',              // Main white text color
 				'button-default': 'var(--button-default)',    // Default button blue color
@@ -25,7 +27,11 @@ export default {
 				'success': 'var(--success)',                  // Green color for success icon on toast
 				'seconday-accent': 'var(--seconday-accent)',  // Primary blue accent color Gradient/Borders
 				'terciary-accent': 'var(--terciary-accent)',  // Secondary pink accent color Gradient/Borders
-			}
+			},
+			boxShadow: {
+				'custom-inner-sm': 'inset 0 1px 1px 0px rgba(255, 255, 255, 0.15)',
+				'custom-inner-md': 'inset 0 2px 2px 0px rgba(255, 255, 255, 0.25)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
